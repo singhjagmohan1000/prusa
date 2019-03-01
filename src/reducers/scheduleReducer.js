@@ -14,7 +14,8 @@ const initialState = {
     schedule_saturday: [],
     schedule_sunday: []
 };
-export default function footerReducer(state = initialState, action) {
+export default function scheduleReducer(state = initialState, action) {
+
     switch (action.type) {
         case SET_SCHEDULE_MONDAY:
             return Object.assign({}, state, {
@@ -45,6 +46,7 @@ export default function footerReducer(state = initialState, action) {
                 schedule_sunday: state.schedule_sunday.concat(action.payload)
             });
         default:
+
             return state;
     }
 }

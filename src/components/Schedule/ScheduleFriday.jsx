@@ -1,41 +1,39 @@
   import React, { Component } from "react";
-  import { setscheduleMonday } from "../../actions/index";
+  import { scheduleFriday } from "../../actions/index";
   import { connect } from "react-redux";
   import Moment from 'react-moment';
 
 
   function mapStateToProps(state) {
     return {
-      monday: state.schedule.schedule_monday
+      friday: state.schedule.schedule_friday
     };
   }
-  class ScheduleMonday extends Component {
+  class ScheduleFriday extends Component {
 
     componentDidMount() {
 
-      this.props.setscheduleMonday();
+      this.props.scheduleFriday();
     }
 
 
     render() {
       return (
-
-              <tbody>{this.props.monday.map(monday =>
+              <tbody>{this.props.friday.map(friday =>
               <tr>
 
                 <td>
                   <Moment
-                      format="h:mm A">{new Date('1976-12-12 ' + monday.time)}</Moment>
+                      format="h:mm A">{new Date('1976-12-12 ' + friday.time)}</Moment>
                 </td>
                 <td>
-                  {monday.radio_show}
+                  {friday.radio_show}
                 </td>
               </tr>
           )}
           </tbody>
-
       )
     }
   }
 
-  export default connect(mapStateToProps,{setscheduleMonday})(ScheduleMonday);
+  export default connect(mapStateToProps,{scheduleFriday})(ScheduleFriday);

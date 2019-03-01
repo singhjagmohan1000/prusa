@@ -6,7 +6,9 @@ const initialState = {
 };
 export default function footerReducer(state = initialState, action) {
   switch (action.type) {
+
     case SET_RADIO_NAME:
+
       return Object.assign({}, state, {
         radio_name: action.radio_name
       });
