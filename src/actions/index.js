@@ -1,5 +1,6 @@
 import { ADD_ARTICLE } from "../constants/index";
 export * from "./footer.actions";
+export * from "./schedule.actions";
 export function addArticle(payload) {
   return { type: ADD_ARTICLE, payload };
 }
