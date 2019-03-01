@@ -5,6 +5,12 @@
 /.pnp
 .pnp.js
 
+
+.idea/
+package-lock.json
+.idea/workspace.xml
+
+
 # testing
 /coverage
 
