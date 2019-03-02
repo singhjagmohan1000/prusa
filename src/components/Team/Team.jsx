@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import TeamList from "./TeamList";
 
 export class Team extends Component {
 
+
+
   render() {
-    return <h2>HI</h2>;
+    return (
+<TeamList/>
+    )
   }
 }
