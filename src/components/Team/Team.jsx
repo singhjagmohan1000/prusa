@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import TeamList from "./TeamList";
+
+import TeamCard from "./TeamCard";
 
 export class Team extends Component {
 
@@ -7,7 +8,7 @@ export class Team extends Component {
 
   render() {
     return (
-<TeamList/>
+<TeamCard/>
     )
   }
 }
