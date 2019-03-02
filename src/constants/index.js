@@ -8,5 +8,7 @@ export const SET_SCHEDULE_THURSDAY = "SET_SCHEDULE_THURSDAY";
 export const SET_SCHEDULE_FRIDAY = "SET_SCHEDULE_FRIDAY";
 export const SET_SCHEDULE_SATURDAY = "SET_SCHEDULE_SATURDAY";
 export const SET_SCHEDULE_SUNDAY = "SET_SCHEDULE_SUNDAY";
+export const SET_CARD_FLIP = "SET_CARD_FLIP";
+export const SET_CARD_CLICK = "SET_CARD_CLICK";
 export const SET_TEAM = "SET_TEAM";
 export const URL = process.env.NODE_ENV === 'production' ? "/api/" : "http://localhost:8080/api/";
