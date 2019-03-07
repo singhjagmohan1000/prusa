@@ -14,4 +14,4 @@ export const PUT_POLL_RESULTS = "PUT_POLL_RESULTS";
 export const GET_US_NEWS = "GET_US_NEWS";
 export const SET_TEAM = "SET_TEAM";
 export const SET_CURRENT_SHOW = "SET_CURRENT_SHOW";
-export const URL = process.env.NODE_ENV === 'production' ? "/api/" : "http://192.168.0.15:8080/api/";
+export const URL = process.env.NODE_ENV === 'production' ? "/api/" : "http://localhost:8080/api/";

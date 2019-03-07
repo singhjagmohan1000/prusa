@@ -1,7 +1,8 @@
 // Render Prop
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-
+import {URL} from "../../constants"
+import axios from "axios";
 export const ContactForm = () => (
   <div>
     <div className="media-box">
@@ -35,14 +36,22 @@ export const ContactForm = () => (
         }
         return errors;
       }}
-      onSubmit={(values, { setSubmitting }) => {
+      onSubmit={(values, { setSubmitting,setStatus }) => {
         setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
+            axios.post(`${URL}contact`,{data:values})
+                .then((res) => {
+                    if(res.status===200)
+                        setStatus({success:"Thanks for contacting Us, we will reach out to you soon!"})
+                    else
+                        setStatus({failed:"We are unable to get your message at the moment, please call us on (408)272 5200!"})
+                }).catch((err)=>{console.log(err)
+                setStatus({failed:"We are unable to get your message at the moment, please call us on (408)272 5200!"})});
+            setSubmitting(false);
+
         }, 400);
       }}
     >
-      {({ isSubmitting }) => (
+      {({ isSubmitting, status }) => (
         <Form id="form-contact" noValidate>
           <div className="comment-form row">
             <div className="col-md-8">
@@ -112,6 +121,9 @@ export const ContactForm = () => (
               >
                 Send Message
               </button>
+                <div>{status? status.success ? <div className="alert alert-success col-md-4" role="alert">{status.success}</div>
+                    :<div className="alert alert-danger col-md-4" role="alert">{status.failed}</div>:''}</div>
+
             </div>
           </div>
         </Form>

@@ -29,37 +29,37 @@ export class App extends React.Component {
             <ul className="expander-list">
               <li>
                 <span className="name">
-                  <Link to="/">Home</Link>
+                  <Link   id="menu-close-home" to="/">Home</Link>
                 </span>
               </li>
               <li>
                 <span className="name">
-                  <Link to="/schedule">Schedule</Link>
+                  <Link  id="menu-close-schedule" to="/schedule">Schedule</Link>
                 </span>
               </li>
               <li>
                 <span className="name">
-                  <Link to="/team">Our Team</Link>
+                  <Link   id="menu-close-team" to="/team">Our Team</Link>
                 </span>
               </li>
               <li>
                 <span className="name">
-                  <a rel="noopener noreferrer"  target="_blank" href="https://facebook.com">Donate</a>
+                  <a  id="menu-close-donate" rel="noopener noreferrer"  target="_blank" href="https://facebook.com">Donate</a>
                 </span>
               </li>
               <li>
                 <span className="name">
-                  <Link to="/advertise">Advertise</Link>
+                  <Link  id="menu-close-advertise" to="/advertise">Advertise</Link>
                 </span>
               </li>
               <li>
                 <span className="name">
-                  <Link to="/about">About Us</Link>
+                  <Link id="menu-close-about" to="/about">About Us</Link>
                 </span>
               </li>
               <li>
                 <span className="name">
-                  <Link to="/contact">Contact Us</Link>
+                  <Link id="menu-close-contact" to="/contact">Contact Us</Link>
                 </span>
               </li>
             </ul>
