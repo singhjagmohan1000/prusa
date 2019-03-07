@@ -30,13 +30,13 @@ export class PRUSACarousel extends React.Component {
                 onSelect={this.handleSelect}
                 className="content container content-row prusa">
                 <Carousel.Item>
-                    <Image cloudName="prusa" className="img-responsive" publicId="carousel/1450AMYubaCity_1903x802_valljg.png">
-                        <Transformation height="860"  width="1280" crop="scale"/>
+                    <Image cloudName="prusa" className="img-responsive" publicId="carousel/1470_AM_Sacramento_1903_802_b5itua.png">
+                        <Transformation height="860"  width="1280"  crop="scale"/>
                     </Image>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <Image cloudName="prusa" className="img-responsive" publicId="carousel/1470_AM_Sacramento_1903_802_b5itua.png">
-                        <Transformation height="860"  width="1280"  crop="scale"/>
+                    <Image cloudName="prusa" className="img-responsive" publicId="carousel/1450AMYubaCity_1903x802_valljg.png">
+                        <Transformation height="860"  width="1280" crop="scale"/>
                     </Image>
                 </Carousel.Item>
                 <Carousel.Item>

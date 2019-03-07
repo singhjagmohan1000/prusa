@@ -430,7 +430,7 @@ jQuery(function ($) {
 });
 jQuery(function ($) {
     "use strict";
-    $("#off-canvas-menu-toggle").bind("click", function (e) {
+    $("#off-canvas-menu-toggle").bind("click touch", function (e) {
         $("body").toggleClass("off-canvas-menu-open");
         $("header .navbar").removeClass("navbar-compact");
         $("html, body").animate({
@@ -438,7 +438,35 @@ jQuery(function ($) {
         }, "300");
         e.preventDefault()
     });
-    $("#off-canvas-menu-close").bind("click", function (e) {
+    $("#off-canvas-menu-close").bind("click touch", function (e) {
+        $("body").removeClass("off-canvas-menu-open");
+        $mobileNavItems.removeClass("active")
+    });
+    $("#menu-close-home").bind("click touch", function (e) {
+        $("body").removeClass("off-canvas-menu-open");
+        $mobileNavItems.removeClass("active")
+    });
+    $("#menu-close-schedule").bind("click touch", function (e) {
+        $("body").removeClass("off-canvas-menu-open");
+        $mobileNavItems.removeClass("active")
+    });
+    $("#menu-close-team").bind("click touch", function (e) {
+        $("body").removeClass("off-canvas-menu-open");
+        $mobileNavItems.removeClass("active")
+    });
+    $("#menu-close-donate").bind("click touch", function (e) {
+        $("body").removeClass("off-canvas-menu-open");
+        $mobileNavItems.removeClass("active")
+    });
+    $("#menu-close-advertise").bind("click touch", function (e) {
+        $("body").removeClass("off-canvas-menu-open");
+        $mobileNavItems.removeClass("active")
+    });
+    $("#menu-close-about").bind("click touch", function (e) {
+        $("body").removeClass("off-canvas-menu-open");
+        $mobileNavItems.removeClass("active")
+    });
+    $("#menu-close-contact").bind("click touch", function (e) {
         $("body").removeClass("off-canvas-menu-open");
         $mobileNavItems.removeClass("active")
     });
@@ -448,7 +476,7 @@ jQuery(function ($) {
         var $this =
             $(this),
             timer;
-        $this.on("click", function (e) {
+        $this.on("click touch", function (e) {
             e.preventDefault();
             if (!$this.parent().hasClass("active")) {
                 $mobileNavItems.removeClass("active");
