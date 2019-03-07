@@ -2793,3 +2793,15 @@ label {
 .table-bordered, .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
     border: 1px solid #fff !important;
 }
+
+.poll{
+	height: 300px;
+	padding-left: 20%;
+	padding-top: 25px;
+}
+
+.poll-btn{
+
+	margin-left: 20%;
+
+}

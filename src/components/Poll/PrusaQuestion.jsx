@@ -95,7 +95,7 @@ return <div>      <form onSubmit={this.handleSubmit}>
             />{this.props.pollQuestion.prusa_poll_options.option_4}</label>
     </div>
     <div className="divider-xs"></div>
-    <button className="btn contact-btn">Submit</button>
+    <button className="poll-btn btn contact-btn">Submit</button>
     <div className="divider-xs"></div>
 
 </form>

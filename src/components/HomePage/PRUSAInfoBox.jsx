@@ -52,10 +52,10 @@ export class PRUSAInfoBox extends React.Component{
                             </div>
                         </div>
                         <div className="col-sm-4  fadeUp info-box">
-
+                                <div className="inside">
                                 <h3>Pole of the Week</h3>
                                 <Poll/>
-
+                                </div>
                         </div>
 
                     </div>
