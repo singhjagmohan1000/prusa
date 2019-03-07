@@ -1271,7 +1271,7 @@ padding:1px 0
 .info-box .inside {
 	background: #e6ecf7;
 	box-shadow: 0 0 2px rgba(0,0,0,0.15);
-	padding: 0 25px 15px;
+	padding: 0 0px 0px;
 }
 .info-box .inside:after, .info-box .inside:before {
 	top: 100%;
@@ -1301,6 +1301,8 @@ padding:1px 0
 	padding: 16px 25px;
 	margin: 0 -25px 25px;
     color: #fff;
+	text-align: center;
+	margin: 0px 0px 0px;
 	border-bottom: 3px dotted #e4e4e4;
 }
 /*djs box*/
@@ -1672,7 +1674,7 @@ footer .copyright-text, footer .copyright-text a {
 .news .news-date {
 	display: inline-block;
 	color: #fff;
-	background: #FF5F18;
+	background: #000e34;
 	font-size: 1em;
 	line-height: 1.769em;
 	padding: 0 5px;
@@ -2641,8 +2643,18 @@ label {
 
 }
 
+@media (max-width:767px) {
+	.media-box h3 {
+		background: #000e34;
+		padding: 16px 25px;
+		margin: -35px 10px 25px 0px;
+		color: #fff;
+		text-align: center;
+		border-radius: 25px;
+	}
+}
 .video-box h3 {
-    background: #FF5F18;
+    background:  #000e34;
     padding: 16px 25px;
     margin: -5px 10px 25px 0px;
     color: #fff;
@@ -2651,6 +2663,16 @@ label {
 
 }
 
+@media (max-width:767px) {
+	.video-box h3 {
+		background:  #000e34;
+		padding: 16px 25px;
+		margin: 25px 10px 25px 0px;
+		color: #fff;
+		text-align: center;
+		border-radius: 25px;
+	}
+}
 @media (min-width:1200px) {
     #prusa-carousal {
         width: 100%;
