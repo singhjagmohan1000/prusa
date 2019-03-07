@@ -9,17 +9,15 @@ import JPlayer, {
   VolumeBar,
   BrowserUnsupported
 } from "react-jplayer";
-
 import { connect } from "react-redux";
+import {currentShow} from "../../actions";
 const defaultOptions = {
   id: "AudioPlayer",
   keyEnabled: true,
   globalVolume: true,
   media: {
-    title: "Live",
+    title: "",
     artist: "KGKG",
-    poster:
-      "http://res.cloudinary.com/prusa/image/upload/c_scale,h_48,w_81/v1474963705/Team/Raj_bduudv.jpg",
     sources: {
       mp3: "http://s2.voscast.com:7016/;"
     }
@@ -28,14 +26,19 @@ const defaultOptions = {
 
 initializeOptions(defaultOptions);
 const mapStateToProps = state => {
-  state.jPlayers.AudioPlayer.media.title = "live1";
-  state.jPlayers.AudioPlayer.media.artist = "Cuurent";
-  state.jPlayers.AudioPlayer.media.poster =
-    "http://res.cloudinary.com/prusa/image/upload/c_scale,h_48,w_81/v1474963705/Team/Raj_bduudv.jpg";
+  if(state.schedule.current_show.live !== undefined && state.schedule.current_show.live=== true)
+  state.jPlayers.AudioPlayer.media.title = "Live";
+  else if(state.schedule.current_show.repeat !== undefined && state.schedule.current_show.repeat=== true)
+    state.jPlayers.AudioPlayer.media.title = "Repeat";
+  state.jPlayers.AudioPlayer.media.artist = state.schedule.current_show.radio_show;
   return { radio_name: state.footer.radio_name };
 };
 
 class AudioPlayer extends React.Component {
+  componentDidMount() {
+    this.props.currentShow();
+  }
+
   render() {
     return (
       <div id="top-player">
@@ -46,10 +49,12 @@ class AudioPlayer extends React.Component {
           <div className="jp-gui jp-interface">
             <div className="jp-details">
               <div className="jp-title-container">
-                <div className="jp-title">
+
+                <div  className="jp-title currentShow">
                   <Poster />
-                  <Title />
+                  <Title/>
                 </div>
+
               </div>
             </div>
             <div className="jp-controls">
@@ -78,4 +83,4 @@ class AudioPlayer extends React.Component {
   }
 }
 
-export default connect(mapStateToProps)(AudioPlayer);
+export default connect(mapStateToProps,{currentShow})(AudioPlayer);

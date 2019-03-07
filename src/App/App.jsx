@@ -44,7 +44,7 @@ export class App extends React.Component {
               </li>
               <li>
                 <span className="name">
-                  <a href="www.google.com">Donate</a>
+                  <a rel="noopener noreferrer"  target="_blank" href="https://facebook.com">Donate</a>
                 </span>
               </li>
               <li>

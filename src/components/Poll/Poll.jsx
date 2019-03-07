@@ -24,7 +24,7 @@ class Poll extends React.Component{
     updateResult = (result) => {this.setState({result})}
     render(){
         return(
-            <div className="poll">
+            <div>
                 {this.state.result ? <Result /> :  <PrusaQuestion pollQuestion={this.props.pollQuestion} updateResult={this.updateResult}/>}
             </div>
 

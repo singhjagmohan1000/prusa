@@ -2,6 +2,7 @@ import React from 'react';
 import Chart from 'react-google-charts';
 import {connect} from "react-redux";
 import { getResult } from "../../actions/index";
+import {PrusLoader} from "./PrusLoader";
 
 
 const mapStateToProps = state => {
@@ -18,7 +19,7 @@ class  Result extends React.Component {
 
     render() {
         if (!this.props.pollResult.prusa_poll_options) {
-            return null;
+            return <PrusLoader/>;
         }
         const chartOptions = {
             backgroundColor: '#e6ecf7',
@@ -44,6 +45,7 @@ class  Result extends React.Component {
             },
             fontName: "Roboto"
         };
+
 
         return (
 

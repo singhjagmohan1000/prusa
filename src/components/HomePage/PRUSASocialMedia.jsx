@@ -10,7 +10,7 @@ class PRUSAFacebook extends React.Component{
         return(
             <div className="col-sm-5 col-lg-4">
                 <div className="media-box">
-                    <h3>Facebook Page</h3>
+                    <h3><span className="icon flaticon-facebook"></span>  &nbsp; Facebook Page</h3>
                 </div>
                 <iframe title="fb"
                         src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FPunjabiRadio%2F&tabs=timeline%2C%20messages&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1099540060206768"
@@ -29,7 +29,7 @@ class PRUSAYoutube extends React.Component{
         return(
             <div className="col-sm-7 col-lg-8">
                 <div className="video-box">
-                    <h3>Featured Video</h3>
+                    <h3><span className="icon flaticon-youtube-play"></span>  &nbsp; Featured Video</h3>
                 </div>
                 <div className="equal-height">
                     <div className="video-responsive">

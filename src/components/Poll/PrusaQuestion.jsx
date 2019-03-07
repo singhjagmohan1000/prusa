@@ -52,7 +52,7 @@ class PrusaQuestion extends React.Component{
             return null;
         }
 
-return <div>      <form onSubmit={this.handleSubmit}>
+return <div className="poll">      <form onSubmit={this.handleSubmit}>
     <strong>{this.props.pollQuestion.prusa_poll_question}</strong>
     <div className="radio">
         <label>
