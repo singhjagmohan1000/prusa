@@ -4,7 +4,7 @@ import { SET_SCHEDULE_WEDNESDAY } from "../constants/index";
 import { SET_SCHEDULE_THURSDAY } from "../constants/index";
 import { SET_SCHEDULE_FRIDAY } from "../constants/index";
 import { SET_SCHEDULE_SATURDAY } from "../constants/index";
-import { SET_SCHEDULE_SUNDAY } from "../constants/index";
+import { SET_SCHEDULE_SUNDAY, SET_CURRENT_SHOW } from "../constants/index";
 import { URL } from "../constants/index"
 import axios from 'axios';
 
@@ -70,6 +70,15 @@ export function scheduleSunday() {
         return axios.get(`${URL}scheduleSunday`)
             .then((res) => {
                 dispatch({ type: SET_SCHEDULE_SUNDAY, payload: res.data });
+            }).catch((err)=>{console.log(err)});
+    };
+}
+
+export function currentShow() {
+    return function(dispatch) {
+        return axios.get(`${URL}currentShow`)
+            .then((res) => {
+                dispatch({ type: SET_CURRENT_SHOW, payload: res.data });
             }).catch((err)=>{console.log(err)});
     };
 }

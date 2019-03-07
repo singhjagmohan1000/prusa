@@ -24,7 +24,7 @@ export class MenuBar extends React.Component {
         </dt>
         <dd />
         <dt className="item">
-          <a type="button" className="btn-main" href="google.com">
+          <a type="button" className="btn-main" rel="noopener noreferrer"  target="_blank" href="https://google.com">
             Donate
           </a>
         </dt>

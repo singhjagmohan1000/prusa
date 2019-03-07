@@ -4,7 +4,7 @@ import { SET_SCHEDULE_WEDNESDAY } from "../constants/index";
 import { SET_SCHEDULE_THURSDAY } from "../constants/index";
 import { SET_SCHEDULE_FRIDAY } from "../constants/index";
 import { SET_SCHEDULE_SATURDAY } from "../constants/index";
-import { SET_SCHEDULE_SUNDAY } from "../constants/index";
+import { SET_SCHEDULE_SUNDAY, SET_CURRENT_SHOW } from "../constants/index";
 const initialState = {
     schedule_monday: [],
     schedule_tuesday: [],
@@ -12,7 +12,8 @@ const initialState = {
     schedule_thursday: [],
     schedule_friday: [],
     schedule_saturday: [],
-    schedule_sunday: []
+    schedule_sunday: [],
+    current_show: {}
 };
 export default function scheduleReducer(state = initialState, action) {
 
@@ -44,6 +45,11 @@ export default function scheduleReducer(state = initialState, action) {
         case SET_SCHEDULE_SUNDAY:
             return Object.assign({}, state, {
                 schedule_sunday: state.schedule_sunday.concat(action.payload)
+            });
+
+        case SET_CURRENT_SHOW:
+            return Object.assign({}, state, {
+                current_show: action.payload
             });
         default:
 

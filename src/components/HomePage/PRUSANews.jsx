@@ -25,8 +25,7 @@ class PRUSANews extends React.Component {
             <div style={divStyle}>
             <div  className="news-carousel" style={newsStyle}>{this.props.news.map(news =>
                 <div  className="news">
-                    <div className="image"><img src="images/liveradio/news-img-1.jpg"
-                                                alt=""/></div>
+
 
                     <div className="news-date"><Moment
                         format="ddd, DD MMM YYYY">{new Date(news.pubDate)}</Moment></div>

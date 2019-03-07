@@ -2692,10 +2692,15 @@ label {
     margin-left: 20px;
 }
 .carousel-inner{
-    margin: -35px -15px;
+    margin: -35px -15px -35px 0px;
 
 }
-
+.carousel-control.left{
+	margin-left: 15px;
+}
+.carousel-control.right{
+	margin-right: 15px;
+}
 .prusa_about{
 
     font-family: 'Cabin', sans-serif;
@@ -2803,5 +2808,23 @@ label {
 .poll-btn{
 
 	margin-left: 20%;
+
+}
+
+table {
+	height: 50px;
+	overflow-y: scroll;
+}
+
+.poll-loader{
+	height: 300px;
+	margin-left: 40%;
+	padding-top: 100px;
+}
+
+.currentShow{
+	width: 100%;
+	height: 15px;
+	padding-top: 20px;
 
 }
