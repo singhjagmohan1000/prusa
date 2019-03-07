@@ -28,38 +28,24 @@ export class Header extends React.Component {
                 </div>
               <div className="col-md-6 col-lg-6 col-xs-6">
                 <div className="row visible-lg visible-md ">
-                  <div className="col-md-2 col-lg-2 col-xs-2">
+                  <div className="col-md-2 col-lg-2 ">
 
                   <h6>Yuba City</h6>
                     <div>1450 AM</div>
                   </div>
-                  <div className="col-md-2 col-lg-2 col-xs-2">
+                  <div className="col-md-2 col-lg-2 ">
                     <h6>Sacramento</h6>
                     <div>1470 AM</div>
                   </div>
-                  <div className="col-md-2 col-lg-2 col-xs-2">
+                  <div className="col-md-2 col-lg-2 ">
                     <h6>Fresno</h6>
                     <div>1300 AM</div>
                   </div>
-                  <div className="col-md-2 col-lg-2 col-xs-2">
+                  <div className="col-md-2 col-lg-2">
                     <h6>Bakersfield</h6>
                     <div>1350 AM</div>
                   </div>
                 </div>
-                {/*<div className="row visible-lg visible-md">*/}
-                  {/*<div className="col-md-2 col-lg-2 col-xs-2">*/}
-                    {/*<h5>1450 AM</h5>*/}
-                  {/*</div>*/}
-                  {/*<div className="col-md-2 col-lg-2 col-xs-2">*/}
-                    {/*<h5>1470 AM</h5>*/}
-                  {/*</div>*/}
-                  {/*<div className="col-md-2 col-lg-2 col-xs-2">*/}
-                    {/*<h5>1300 AM</h5>*/}
-                  {/*</div>*/}
-                  {/*<div className="col-md-2 col-lg-2 col-xs-2">*/}
-                    {/*<h5>1350 AM</h5>*/}
-                  {/*</div>*/}
-                {/*</div>*/}
               </div>
                 <div className="col-md-4 col-lg-4 col-xs-4 visible-lg visible-md">
               <AudioPlayer />
