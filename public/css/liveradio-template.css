@@ -1,7 +1,7 @@
 
 /* Google font */
-@import url(http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic);
-@import url(http://fonts.googleapis.com/css?family=Cabin:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Cabin:400,600,700);
 
 html, html a {
 	-webkit-font-smoothing: antialiased
@@ -14,7 +14,7 @@ body {
 	color: #0030A6;
     height: 100%;
     position: relative;
-	background: url(../images/liveradio/body-bg.png) repeat 0 0 #fff
+
 }
 a, a:active, a:focus, a:hover, a:visited {
 	color: #0030A6;
@@ -2712,7 +2712,8 @@ label {
 }
 
 .prusa_about p{
-	margin: 40px 15px;
+	margin: 40px 150px;
+	text-align: justify;
 
 }
 

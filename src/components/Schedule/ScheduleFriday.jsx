@@ -23,9 +23,11 @@
               <tr>
 
                 <td>
-                  <Moment
-                      format="h:mm A">{new Date('1976-12-12 ' + friday.time)}</Moment>
+                  {/*<Moment*/}
+                      {/*format="h:mm A">{new Date('1976/12/12 ' + friday.time)}</Moment>*/}
+                  <Moment format={"yyyy/dd/mm"}>{new Date('1976/12/12 ')}</Moment>
                 </td>
+
                 <td>
                   {friday.radio_show}
                 </td>

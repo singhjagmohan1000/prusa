@@ -45,7 +45,7 @@ class PrusaQuestion extends React.Component{
 
     }
 
-    render(){console.log(this.props.pollQuestion)
+    render(){
         if (!this.props.pollQuestion.prusa_poll_options) {
 
 

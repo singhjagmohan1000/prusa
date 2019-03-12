@@ -34,11 +34,25 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	border-radius: 50%;
+	border-radius: 100%;
 	background-position: center center;
 	-webkit-backface-visibility: hidden; /*Just for webkit to have a smooth font*/
 	margin-top: -36px;
-	margin-left: -7px;
+	margin-left: -10%;
+}
+@supports (-webkit-overflow-scrolling: touch) {
+	.jp-play > div {
+		display: block;
+		cursor: pointer;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: 100%;
+		background-position: center center;
+		-webkit-backface-visibility: hidden; /*Just for webkit to have a smooth font*/
+		margin-top: -36px;
+		margin-left: -20%;
+	}
 }
 .jp-play .jp-play-front {
 	-webkit-transition: all 0.6s ease-in-out;
@@ -109,7 +123,7 @@
 	height: 30px;
 	position: absolute;
 	right: 0;
-	top: 26px;
+	top: 30px;
 }
 .jp-mute {
 	background: url("../image/mute-button.png") center center no-repeat;
@@ -142,15 +156,15 @@
 	overflow: hidden;
 	background: #e7e7e7;
 	top: 40px;
-	left: 0;
-	width: 85px;
-	height: 2px;
+	left: -30PX;
+	width: 130px;
+	height: 11px;
 	cursor: pointer;
 }
 .jp-volume-bar-value {
 	background: #FF5F18;
 	width: 0px;
-	height: 2px;
+	height: 11px;
 }
 /* @end */
 /* @group playlist */
@@ -198,7 +212,15 @@
 	margin: 0;
 	font-weight: bold;
 }
+@media (min-width: 500px) {
+	.jp-details .jp-title {
+		margin: 0;
+		margin-left: 30px;
+		margin-top: 8px;
+		font-weight: bold;
+	}
 
+}
 
 span.jp-artist {
 	font-size: .8em;

@@ -25,16 +25,16 @@ class PRUSAYoutube extends React.Component{
 
     render(){
         const latestvideo={id:
-                "O5roAVeGdFI"}
+                "punjabiradiousa"}
         return(
             <div className="col-sm-7 col-lg-8">
                 <div className="video-box">
-                    <h3><span className="icon flaticon-youtube-play"></span>  &nbsp; Featured Video</h3>
+                    <h3><span className="icon flaticon-youtube-play"></span>  &nbsp; Latest Video</h3>
                 </div>
                 <div className="equal-height">
                     <div className="video-responsive">
                         <iframe title="youtube" width="390" height="315"
-                                src={"https://www.youtube.com/embed/"+latestvideo.id} frameBorder="0"
+                                src={"https://www.youtube.com/embed?listType=user_uploads&list="+latestvideo.id} frameBorder="0"
                                 allowFullScreen></iframe>
                     </div>
                 </div>
