@@ -176,7 +176,7 @@
 	text-align: left;
 	font-size: 13px;
 	line-height: 15px;
-	color: #FF5F18;
+	color: #000e34;
 	text-transform: uppercase;
 }
 .jp-state-no-volume .jp-details {
@@ -215,7 +215,7 @@
 @media (min-width: 500px) {
 	.jp-details .jp-title {
 		margin: 0;
-		margin-left: 30px;
+		margin-left: 0px;
 		margin-top: 8px;
 		font-weight: bold;
 	}

@@ -30,7 +30,7 @@ export class MenuBar extends React.Component {
         </dt>
         <dd />
         <dt className="item">
-          <Link to="/advertise" type="button" class="btn-main">
+          <Link to="/advertise" id="prusa-advertise" type="button" class="btn-main">
             Advertise
           </Link>
         </dt>

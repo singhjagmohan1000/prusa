@@ -23,7 +23,8 @@ class ScheduleTuesday extends Component {
 
                   <td>
                     <Moment
-                        format="h:mm A">{new Date('1976-12-12 ' + tuesday.time)}</Moment>
+                        format="h:mm A">{new Date('1976/12/12 ' + tuesday.time)}</Moment>
+
                   </td>
                   <td>
                     {tuesday.radio_show}

@@ -190,7 +190,32 @@ jQuery(function ($) {
    };
 }})
 });
-
+// jQuery("#prusa-advertise").click(function($) {
+//
+//
+//
+//         $(".blog-widget .posts").flexslider({
+//             animation: "slide",
+//             keyboard: false,
+//             controlNav: false,
+//             animationLoop: false,
+//             slideshow: false,
+//             prevText: "",
+//             nextText: "",
+//             itemMargin: 50
+//         });
+//         $(".blog-widget-small .posts").flexslider({
+//             animation: "slide",
+//             keyboard: false,
+//             controlNav: false,
+//             animationLoop: false,
+//             slideshow: false,
+//             prevText: "",
+//             nextText: "",
+//             itemMargin: 0
+//         });
+//
+// })
 jQuery(function ($) {
     "use strict";
     $(".blog-widget .posts").flexslider({

@@ -3,8 +3,8 @@
  * Copyright 2012 WooThemes
  * Contributing Author: Tyler Smith
  */
-;
-(function ($) {
+
+(function loadflex($) {
 
   //FlexSlider: Object Instance
   $.flexslider = function(el, options) {
@@ -604,7 +604,7 @@
 
           if ('hidden' in document) return 'hidden';
           for (var i = 0; i < prefixes.length; i++) {
-            if ((prefixes[i] + 'Hidden') in document) 
+            if ((prefixes[i] + 'Hidden') in document)
             methods.pauseInvisible.visProp = prefixes[i] + 'Hidden';
           }
           if (methods.pauseInvisible.visProp) {
@@ -619,7 +619,7 @@
                 else (slider.vars.initDelay > 0) ? setTimeout(slider.play, slider.vars.initDelay) : slider.play(); //Didn't init before: simply init or wait for it
               }
             });
-          }       
+          }
         },
         isHidden: function() {
           return document[methods.pauseInvisible.visProp] || false;
@@ -1135,106 +1135,4 @@
 /**
  * jQuery flexVSlider, fixed vertical carousel of flexslider
  */
-(function( $ ) {
-    $.fn.flexVSlider = function( settings ) {
-        $( this ).each(function() {
-            var $this = $( this );
 
-            $this.flexslider($.extend( {}, settings, {
-                direction: "vertical",
-                animationLoop: false,
-                start: function( slider ) {
-                    var $wrapper = $( ".flex-viewport", $this),
-                        height, setVisible;
-
-                    if ( $wrapper.length && settings && settings.visible && settings.visible > 1 ) {
-                        height = parseInt( $wrapper.get( 0 ).style.height );
-                        $wrapper.get( 0 ).style.setProperty( "height", height * settings.visible + "px", "important" );
-                    } else if ( $wrapper.length && ( !settings || !settings.visible ) ) {
-                        height = parseInt( $wrapper.get( 0 ).style.height );
-                        setVisible = Math.round( $wrapper.height() / height );
-                    }
-
-                    if ( settings && settings.move && settings.move > 1 ) {
-                        var $nav = $( ".flex-direction-nav", $this );
-
-                        $nav = $nav.clone().insertAfter( $nav.hide() );
-
-                        var $next = $( ".flex-next", $nav ).unbind( "click" ),
-                            $prev = $( ".flex-prev", $nav ).unbind( "click" ),
-                            count = slider.count,
-                            move = settings.move,
-                            visible = settings && settings.visible || setVisible;
-
-                        if ( !slider.transitions ) {
-                            move = 1;
-                        }
-
-                        if ( ( count - slider.currentSlide - visible ) < 1 ) {
-                            $next.addClass( "flex-disabled" );
-                        } else {
-                            $next.removeClass( "flex-disabled" );
-                        }
-
-                        if ( slider.currentSlide < 1 ) {
-                            $prev.addClass( "flex-disabled" );
-                        } else {
-                            $prev.removeClass( "flex-disabled" );
-                        }
-
-                        $next.click(function( e ) {
-                            e.preventDefault();
-
-                            if ( $next.hasClass( "flex-disabled" ) ) {
-                                return true;
-                            }
-
-                            var total = count - slider.currentSlide - visible,
-                                cycles = Math.min( total, move );
-
-                            if ( move >= total ) {
-                                $next.addClass( "flex-disabled" );
-                            }
-
-                            for ( var i = 0; i < cycles; i++ ) {
-                                $this.flexslider( "next" );
-                            }
-
-                            $prev.removeClass( "flex-disabled" );
-
-                            return true;
-                        });
-
-                        $prev.click(function( e ) {
-                            e.preventDefault();
-
-                            if ( $prev.hasClass( "flex-disabled" ) ) {
-                                return true;
-                            }
-
-                            var total = slider.currentSlide,
-                                cycles = Math.min( total, move );
-
-                            if ( move >= total ) {
-                                $prev.addClass( "flex-disabled" );
-                            }
-
-                            for ( var i = 0; i < cycles; i++ ) {
-                                $this.flexslider( "prev" );
-                            }
-
-                            $next.removeClass( "flex-disabled" );
-
-                            return true;
-                        });
-
-                    }
-
-                    if ( settings.start ) {
-                        settings.start.apply( this, arguments );
-                    }
-                }
-            }));
-        });
-    };
-})( jQuery );

@@ -6,8 +6,7 @@ export class LeftFooter extends React.Component {
   constructor() {
     super();
     this.state = {
-      radio_name: "Punjabi Radio USA",
-      copyright_year: "2019"
+      radio_name: "Punjabi Radio USA"
     };
   }
   render() {
@@ -19,7 +18,7 @@ export class LeftFooter extends React.Component {
           </Image>
         </Link>
         <div>
-          &copy; {this.state.copyright_year} {this.state.radio_name}.{" "}
+          &copy; 2010-{new Date().getFullYear()} {this.state.radio_name}.{" "}
           <span className="clearfix visible-sm" />
           All Rights Reserved.
         </div>

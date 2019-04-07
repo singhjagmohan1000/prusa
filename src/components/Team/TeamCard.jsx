@@ -52,6 +52,9 @@ class TeamCard extends React.Component {
         const cardStyle = {
             maxWidth: "302px"
         }
+        const prbtn={
+            marginLeft: "8%"
+        }
 
         return (
             <div className="team-container">
@@ -72,9 +75,9 @@ class TeamCard extends React.Component {
                                                         <div className="card-block">
                                                             <h3 className="name">{member.prusa_team_name}</h3>
                                                             <p className="profession">{member.prusa_team_profession}</p>
-                                                            <p className="card-text">Some quick example text to build on the
-                                                                card title and make up the bulk of the card's content.</p>
-                                                            <button className="btn btn-simple" onClick={this.handleClick}><i className="fa fa-repeat"></i> Click Here For More Information
+                                                            <p className="card-text prusa-card">{member.prusa_team_hometown}</p>
+                                                            <p className="card-text prusa-card">{member.prusa_team_education}</p>
+                                                            <button style={prbtn} className="btn btn-simple prusa-card" onClick={this.handleClick}><i className="fa fa-repeat"></i> Click Here For More Information
                                                             </button>
                                                         </div>
 
@@ -86,13 +89,12 @@ class TeamCard extends React.Component {
 
                                                     <div className="front">
                                                         <div className="card-header">
-                                                            <h5 className="motto">"Save even one life from drugs"</h5>
+                                                            <h5 className="motto">{member.prusa_team_mission}</h5>
                                                         </div>
                                                         <div className="content">
                                                             <div className="main">
                                                                 <h4 className="text-center">Shows</h4>
-                                                                <p className="text-center">Web design, Adobe Photoshop, HTML5,
-                                                                    CSS3, Corel and many others...</p>
+                                                                <p className="text-center">{member.prusa_show}</p>
 
                                                                 <div className="stats-container">
                                                                     <div className="stats">

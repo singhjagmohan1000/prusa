@@ -504,8 +504,8 @@ padding:1px 0
 .icon.icon-twitter {
 	color: #00b6e4
 }
-.icon.icon-linkedin {
-	color: #0073a5
+.icon.icon-instagram {
+	color: #C13584
 }
 .icon.icon-youtube {
 	color: #ff0000
@@ -1028,10 +1028,12 @@ padding:1px 0
 }
 .blog-widget h3 {
 	text-decoration: none;
-	color: #fff;
+	color: #000e34;
+	margin-left:25%;
 	font-size: 2.0em;
 	text-align: center;
 	margin-bottom: 5px;
+	margin-left: 8%;
 }
 .blog-widget h3 .icon {
 	font-size: 1.3em;
@@ -1045,6 +1047,8 @@ padding:1px 0
 	margin-bottom: 5px;
 	text-decoration: none;
 	color: #fff;
+	font-size: x-large;
+	margin-left:200px;
 	font-weight: bold;
 }
 .blog-widget a {
@@ -1058,7 +1062,7 @@ padding:1px 0
 	padding: 40px 20px 20px 160px;
 	margin: 0 80px;
 	position: relative;
-	background: rgba(16,24,35,0.7)
+	background: #000e34;
 }
 .blog-widget .posts:before {
 	display: block;
@@ -1685,6 +1689,9 @@ footer .copyright-text, footer .copyright-text a {
 	border: none;
 	padding: 0 !important;
 	background-color: #fafafa;
+	margin-left: 3%;
+	margin-right: 3%
+
 }
 .nav-tabs>li {
 	display: inline-block;
@@ -1719,7 +1726,7 @@ footer .copyright-text, footer .copyright-text a {
 }
 .tab-content {
 	padding: 20px 30px 15px;
-	border-top: 3px dotted #e4e4e4;
+	/*border-top: 3px dotted #e4e4e4;*/
 	margin-bottom: 20px;
 
 }
@@ -2716,7 +2723,15 @@ label {
 	text-align: justify;
 
 }
+@media (max-width: 500px){
 
+
+	.prusa_about p {
+		margin: 5px 20px;
+		text-align: justify;
+
+	}
+}
 @media (min-width:1500px) {
     .prusa_about {
         margin-bottom: 100%;
@@ -2830,3 +2845,38 @@ table {
 	padding-top: 20px;
 
 }
+
+.advertise{
+
+	color: #030303;
+	text-align: justify;
+	font-size: large;
+	font-weight: bold;
+}
+
+.ad_banner_odd{
+    margin-left:10px;
+    margin-right: 5px;
+    background: #000e34;
+    color:whitesmoke;
+    text-align: justify-all;
+    text-emphasis-color: whitesmoke;
+    text-decoration-width: auto;
+
+}
+
+.ad_banner_text{
+	text-align: justify;
+	margin-top: 12%;
+	font-size: large;
+	font-weight: bold;
+}
+
+@media (max-width:767px) {
+
+    .ad_banner_text{
+        margin-left:5px;
+        margin-top: 11%;
+    }
+}
+

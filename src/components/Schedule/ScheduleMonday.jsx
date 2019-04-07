@@ -25,7 +25,7 @@
 
                 <td>
                   <Moment
-                      format="h:mm A">{new Date('1976-12-12 ' + monday.time)}</Moment>
+                      format="h:mm A">{new Date('1976/12/12 ' + monday.time)}</Moment>
                 </td>
                 <td>
                   {monday.radio_show}
