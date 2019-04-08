@@ -1,6 +1,8 @@
 import React from 'react';
 import {Carousel} from 'react-bootstrap';
 import {Image, Transformation} from "cloudinary-react";
+import {URL} from "../../constants";
+import axios from "axios";
 export class PRUSACarousel extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -9,7 +11,9 @@ export class PRUSACarousel extends React.Component {
 
         this.state = {
             index: 0,
-            direction: null
+            direction: null,
+            images: "",
+            load:false
         };
     }
 
@@ -20,8 +24,19 @@ export class PRUSACarousel extends React.Component {
         });
     }
 
+    componentDidMount() {
+        axios.get(`${URL}prusaCaraousel`)
+            .then((res) => {
+               this.setState({images: res.data,load: true})
+
+            }).catch((err)=>{console.log(err)});
+
+    }
+
     render() {
         const { index, direction } = this.state;
+
+        if(!this.state.load){
 
         return (
             <Carousel
@@ -45,6 +60,22 @@ export class PRUSACarousel extends React.Component {
                     </Image>
                 </Carousel.Item>
             </Carousel>
-        );
+
+        );}
+        else{
+            return(
+            <Carousel
+            activeIndex={index}
+            direction={direction}
+            onSelect={this.handleSelect}
+            className="content container content-row prusa">{this.state.images.map((image,index)=>
+            <Carousel.Item>
+                <Image cloudName="prusa" className="img-responsive" publicId={image.CLOUD_ID}>
+                    <Transformation height="860"  width="1280"  crop="scale"/>
+                </Image>
+                </Carousel.Item>
+                )} </Carousel>
+
+            );}
     }
 }

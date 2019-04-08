@@ -138,6 +138,7 @@ h6 {
 	height: 100px;
 	display: table;
 	padding-top: 15px;
+	margin-left: 30%;
 }
 .text-float-right .inside {
 	height: 100px;
@@ -973,6 +974,7 @@ padding:1px 0
 .banner-box h3 {
 	padding-bottom: 0;
 	font-weight: 600;
+	color: #ff5f19;
 }
 /*blockquote*/
 .blockquote {

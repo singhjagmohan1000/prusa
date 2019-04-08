@@ -15,9 +15,9 @@ export class Header extends React.Component {
                   <Link to="/">
                     <Image
                         cloudName="prusa"
-                        publicId="Logo_420_by_85_c7n3rf.png"
+                        publicId="PRUSA_Transparent_LOGO_lhnjhp.png"
                     >
-                      <Transformation width="420" height="85" crop="scale" />
+                      <Transformation width="150" height="85" crop="scale" />
                     </Image>
                   </Link>
 
