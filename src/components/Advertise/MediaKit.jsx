@@ -1,25 +1,13 @@
 import React from "react";
-import axios from "axios";
-
+import { MEDIAURL } from "../../constants";
 export class MediaKit extends React.Component{
 
     downloadRandomImage = () => {
 
-        axios(`http://localhost:8080/mediakit`, {
-            method: "GET",
-            responseType: "blob"
-//Force to receive data in a Blob Format
-        })
+        fetch(`${MEDIAURL}`)
             .then(response => {
                 //Create a Blob from the PDF Stream
-                const file = new Blob([response.data], {
-                    type: "application/pdf"
-                });
-
-                //Build a URL from the file
-                const fileURL = URL.createObjectURL(file);
-                //Open the URL on new Window
-                window.open(fileURL);
+                console.log("file d");
             })
             .catch(error => {
                 console.log(error);
@@ -49,7 +37,7 @@ export class MediaKit extends React.Component{
                                 <p>To know more about advertising zones, Download our Media Kit</p>
 
                                     <div className="form-group">
-                                        <button type="submit" className="btn btn-success" onClick={this.downloadRandomImage} >Download</button>
+                                        <a  className="btn btn-success" href={MEDIAURL} >Download</a>
                                     </div>
 
                             </div>

@@ -17,20 +17,20 @@ const defaultOptions = {
   globalVolume: true,
   media: {
     title: "",
-    artist: "KGKG",
+    artist: "Listen Live",
     sources: {
-      mp3: "http://s2.voscast.com:7016/;"
+      mp3: "https://s5.voscast.com:9281/stream"
     }
   }
 };
 
 initializeOptions(defaultOptions);
 const mapStateToProps = state => {
-  if(state.schedule.current_show.live !== undefined && state.schedule.current_show.live=== true)
+
+  if(state.schedule.current_show.is_live !== undefined && state.schedule.current_show.is_live=== true)
   state.jPlayers.AudioPlayer.media.title = "Live";
-  else if(state.schedule.current_show.repeat !== undefined && state.schedule.current_show.repeat=== true)
-    state.jPlayers.AudioPlayer.media.title = "Repeat";
-  state.jPlayers.AudioPlayer.media.artist = state.schedule.current_show.radio_show;
+  if(state.schedule.current_show.is_live !== undefined && state.schedule.current_show.is_live=== true)
+  state.jPlayers.AudioPlayer.media.artist = state.schedule.current_show.prusa_show.name;
   return { radio_name: state.footer.radio_name };
 };
 

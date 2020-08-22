@@ -18,9 +18,10 @@ class  Result extends React.Component {
     }
 
     render() {
-        if (!this.props.pollResult.prusa_poll_options) {
+        if (!this.props.pollResult.poll_data) {
             return <PrusLoader/>;
         }
+
         const chartOptions = {
             backgroundColor: '#e6ecf7',
             title: "Survey",
@@ -52,11 +53,10 @@ class  Result extends React.Component {
             <div >
                 <Chart
                     chartType="PieChart"
-                    data={[[this.props.pollResult.prusa_poll_options.option_1, this.props.pollResult.prusa_poll_options.option_2],
-                        [this.props.pollResult.prusa_poll_options.option_1, this.props.pollResult.prusa_poll_results.option_1],
-                        [this.props.pollResult.prusa_poll_options.option_2, this.props.pollResult.prusa_poll_results.option_2],
-                        [this.props.pollResult.prusa_poll_options.option_3, this.props.pollResult.prusa_poll_results.option_3],
-                        [this.props.pollResult.prusa_poll_options.option_4, this.props.pollResult.prusa_poll_results.option_4],
+                    data={[["Options", "Result"],
+                        [this.props.pollResult.poll_data.poll_options.option_1.option_name, this.props.pollResult.poll_data.poll_options.option_1.result],
+                        [this.props.pollResult.poll_data.poll_options.option_2.option_name, this.props.pollResult.poll_data.poll_options.option_2.result],
+                        [this.props.pollResult.poll_data.poll_options.option_3.option_name,this.props.pollResult.poll_data.poll_options.option_3.result]
 
                     ]}
                     options={chartOptions}

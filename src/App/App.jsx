@@ -7,6 +7,7 @@ import {
   Advertise,
   Team,
   Schedule,
+  Listen,
   Header,
   Footer,
   Contact
@@ -44,7 +45,12 @@ export class App extends React.Component {
               </li>
               <li>
                 <span className="name">
-                  <a  id="menu-close-donate" rel="noopener noreferrer"  target="_blank" href="https://facebook.com">Donate</a>
+                  <Link   id="menu-close-team" to="/listen">Ways To Listen</Link>
+                </span>
+              </li>
+              <li>
+                <span className="name">
+                  <a  id="menu-close-donate" rel="noopener noreferrer"  target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info@punjabiradiousa.com&item_name=Punjabi+Radio+USA">Donate</a>
                 </span>
               </li>
               <li>
@@ -71,6 +77,7 @@ export class App extends React.Component {
               <Route path="/team" component={Team} />
               <Route path="/schedule" component={Schedule} />
               <Route path="/advertise" component={Advertise} />
+              <Route path="/listen" component={Listen} />
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
               <div className="clearfooter" />

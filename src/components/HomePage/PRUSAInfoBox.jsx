@@ -17,10 +17,10 @@ export class PRUSAInfoBox extends React.Component{
         const gbadgeMargin={
             marginLeft: '75px'
         }
-        const abadgeMargin={
-            marginLeft: '85px',
-            marginTop: '5px'
-        }
+        // const abadgeMargin={
+        //     marginLeft: '85px',
+        //     marginTop: '5px'
+        // }
         return(
             <div className="content">
                 <div className="container">
@@ -40,20 +40,16 @@ export class PRUSAInfoBox extends React.Component{
 
                                     <a href="https://itunes.apple.com/us/app/punjabi-radio-usa/id653916981?mt=8"> <AppDownload/></a>
                                 </div>
-
+                                <br/><br/>
                                 <div style={gbadgeMargin} id="google-play" className="app-download">
                                     <a href='https://play.google.com/store/apps/details?id=com.twis.punjabiradio&hl=en&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' width="200" height="80" src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
-                                </div>
-
-                                <div style={abadgeMargin} id="amazon-alexa" className="app-download">
-                                    <img className="app-download" alt="Just Ask Alexa" width="180" src="images/liveradio/askBadge.png"/>
                                 </div>
                             </div>
                             </div>
                         </div>
                         <div className="col-sm-4  fadeUp info-box">
                                 <div className="inside">
-                                    <h3><span className="icon flaticon-podcast6"></span>  &nbsp; Pole of the Week</h3>
+                                    <h3><span className="icon flaticon-podcast6"></span>  &nbsp; Poll of the Week</h3>
                                 <Poll/>
                                 </div>
                         </div>

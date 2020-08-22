@@ -22,9 +22,14 @@ export class MenuBar extends React.Component {
             Our Team
           </Link>
         </dt>
+          <dt className="item">
+              <Link type="button" class="btn-main" to="/listen">
+                  Ways To Listen
+              </Link>
+          </dt>
         <dd />
         <dt className="item">
-          <a type="button" className="btn-main" rel="noopener noreferrer"  target="_blank" href="https://google.com">
+          <a type="button" className="btn-main" rel="noopener noreferrer"  target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info@punjabiradiousa.com&item_name=Punjabi+Radio+USA">
             Donate
           </a>
         </dt>

@@ -1,8 +1,6 @@
   import React, { Component } from "react";
   import { scheduleFriday } from "../../actions/index";
   import { connect } from "react-redux";
-  import Moment from 'react-moment';
-
 
   function mapStateToProps(state) {
     return {
@@ -24,13 +22,11 @@
               <tr>
 
                 <td>
-                  <Moment
-                      format="h:mm A">{new Date('1976/12/12 ' + friday.time)}</Moment>
-
+                  {friday.show.start_time}
                 </td>
 
                 <td>
-                  {friday.radio_show}
+                  {friday.show.prusa_show.name}
                 </td>
               </tr>
           )}

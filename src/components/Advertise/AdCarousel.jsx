@@ -23,7 +23,7 @@ export class AdCarousel extends React.Component {
 
     render() {
         const { index, direction } = this.state;
-        const coverageIconStyle={color:"#FF5F18"};
+        const coverageIconStyle={color:"#2881ce"};
         const coverageHeaderStyle={color:"#000e34"};
 
         return (

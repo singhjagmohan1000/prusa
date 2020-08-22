@@ -69,14 +69,14 @@ class TeamCard extends React.Component {
 
                                                 <div key="front">
                                                     <div className="front">
-                                                        <Image className="card-img-top img-responsive" style={imgStyle} alt="Card cap" cloudName="prusa" publicId={member.prusa_team_image_id}>
+                                                        <Image className="card-img-top img-responsive" style={imgStyle} alt="Card cap" cloudName="prusa" publicId={member.image_id}>
                                                         </Image>
 
                                                         <div className="card-block">
-                                                            <h3 className="name">{member.prusa_team_name}</h3>
-                                                            <p className="profession">{member.prusa_team_profession}</p>
-                                                            <p className="card-text prusa-card">{member.prusa_team_hometown}</p>
-                                                            <p className="card-text prusa-card">{member.prusa_team_education}</p>
+                                                            <h3 className="name">{member.name}</h3>
+                                                            <p className="profession">{member.role}</p>
+                                                            <p className="card-text prusa-card">{member.hometown}</p>
+                                                            <p className="card-text prusa-card">{member.education}</p>
                                                             <button style={prbtn} className="btn btn-simple prusa-card" onClick={this.handleClick}><i className="fa fa-repeat"></i> Click Here For More Information
                                                             </button>
                                                         </div>
@@ -89,33 +89,36 @@ class TeamCard extends React.Component {
 
                                                     <div className="front">
                                                         <div className="card-header">
-                                                            <h5 className="motto">{member.prusa_team_mission}</h5>
+                                                            <h5 className="motto">{member.mission}</h5>
                                                         </div>
                                                         <div className="content">
                                                             <div className="main">
-                                                                <h4 className="text-center">Shows</h4>
-                                                                <p className="text-center">{member.prusa_show}</p>
-
-                                                                <div className="stats-container">
-                                                                    <div className="stats">
-                                                                        <h4>235</h4>
-                                                                        <p>
-                                                                            Followers
-                                                                        </p>
-                                                                    </div>
-                                                                    <div className="stats">
-                                                                        <h4>114</h4>
-                                                                        <p>
-                                                                            Following
-                                                                        </p>
-                                                                    </div>
-                                                                    <div className="stats">
-                                                                        <h4>35</h4>
-                                                                        <p>
-                                                                            Projects
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
+                                                                <h5 className="text-center">Profession</h5>
+                                                                <p className="text-center">{member.profession}</p>
+                                                                <h5 className="text-center">Hobbies</h5>
+                                                                <p className="text-center">{member.hobbies}</p>
+                                                                <h5  className="text-center">Favourite Food</h5>
+                                                                <p className="text-center">{member.fav_food}</p>
+                                                                {/*<div className="stats-container">*/}
+                                                                {/*    <div className="stats">*/}
+                                                                {/*        <h4>235</h4>*/}
+                                                                {/*        <p>*/}
+                                                                {/*            Followers*/}
+                                                                {/*        </p>*/}
+                                                                {/*    </div>*/}
+                                                                {/*    <div className="stats">*/}
+                                                                {/*        <h4>114</h4>*/}
+                                                                {/*        <p>*/}
+                                                                {/*            Following*/}
+                                                                {/*        </p>*/}
+                                                                {/*    </div>*/}
+                                                                {/*    <div className="stats">*/}
+                                                                {/*        <h4>35</h4>*/}
+                                                                {/*        <p>*/}
+                                                                {/*            Projects*/}
+                                                                {/*        </p>*/}
+                                                                {/*    </div>*/}
+                                                                {/*</div>*/}
 
                                                             </div>
                                                         </div>

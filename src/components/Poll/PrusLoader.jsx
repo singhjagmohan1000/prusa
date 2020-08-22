@@ -9,7 +9,7 @@ export class PrusLoader extends React.Component {
                 <MoonLoader
                     sizeUnit={"px"}
                     size={80}
-                    color={'#FF5F18'}
+                    color={'#2881ce'}
                 />
             </div>
         )

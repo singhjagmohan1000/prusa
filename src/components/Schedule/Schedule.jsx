@@ -5,11 +5,8 @@ import ScheduleTuesday from './ScheduleTuesday';
 import ScheduleWednesday from './ScheduleWednesday';
 import ScheduleThursday from './ScheduleThursday';
 import ScheduleFriday from './ScheduleFriday';
-import ScheduleSaturday from './ScheduleThursday';
+import ScheduleSaturday from './ScheduleSaturday';
 import ScheduleSunday from './ScheduleSunday';
-
-
-
 
 export class Schedule extends React.Component{
     constructor(props) {

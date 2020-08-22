@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { updatePoll } from "../../actions/index";
+import {PrusLoader} from "./PrusLoader";
 
 const mapStateToProps = state => {
 
@@ -39,21 +40,21 @@ class PrusaQuestion extends React.Component{
 
     handleSubmit(event){
         event.preventDefault();
-        this.props.updatePoll(this.state.selectedOption);
+        this.props.updatePoll({poll:this.props.pollQuestion,option:this.state.selectedOption});
         this.props.updateResult(true);
 
 
     }
 
     render(){
-        if (!this.props.pollQuestion.prusa_poll_options) {
+        if (!this.props.pollQuestion.poll_data) {
 
 
-            return null;
+            return <PrusLoader/>;
         }
 
 return <div className="poll">      <form onSubmit={this.handleSubmit}>
-    <strong>{this.props.pollQuestion.prusa_poll_question}</strong>
+    <strong>{this.props.pollQuestion.poll_data.poll_question}</strong>
     <div className="radio">
         <label>
             <input
@@ -62,7 +63,7 @@ return <div className="poll">      <form onSubmit={this.handleSubmit}>
                 value="option_1"
                 checked={this.state.selectedOption === "option_1"}
                 onChange={this.handleChange}
-            />{this.props.pollQuestion.prusa_poll_options.option_1}</label>
+            />{this.props.pollQuestion.poll_data.poll_options.option_1.option_name}</label>
     </div>
     <div className="radio">
         <label>
@@ -72,7 +73,7 @@ return <div className="poll">      <form onSubmit={this.handleSubmit}>
                 value="option_2"
                 checked={this.state.selectedOption === "option_2"}
                 onChange={this.handleChange}
-            />{this.props.pollQuestion.prusa_poll_options.option_2}</label>
+            />{this.props.pollQuestion.poll_data.poll_options.option_2.option_name}</label>
     </div>
     <div className="radio">
         <label>
@@ -82,18 +83,9 @@ return <div className="poll">      <form onSubmit={this.handleSubmit}>
                 value="option_3"
                 checked={this.state.selectedOption === "option_3"}
                 onChange={this.handleChange}
-            />{this.props.pollQuestion.prusa_poll_options.option_3}</label>
+            />{this.props.pollQuestion.poll_data.poll_options.option_3.option_name}</label>
     </div>
-    <div className="radio">
-        <label>
-            <input
-                type="radio"
-                name="yes"
-                value="option_4"
-                checked={this.state.selectedOption === "option_4"}
-                onChange={this.handleChange}
-            />{this.props.pollQuestion.prusa_poll_options.option_4}</label>
-    </div>
+
     <div className="divider-xs"></div>
     <button className="poll-btn btn contact-btn">Submit</button>
     <div className="divider-xs"></div>

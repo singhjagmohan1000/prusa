@@ -8,7 +8,7 @@ export class Footer extends React.Component {
     super();
     this.state = {
       radio_name: "Punjabi Radio USA",
-      copyright_year: "2019"
+      copyright_year: "2020"
     };
   }
   render() {
@@ -27,7 +27,7 @@ export class Footer extends React.Component {
           <div className="row">
             <div className="col-sm-5 col-md-4 copyright-text">
               {" "}
-              &copy; {this.state.copyright_year} {this.state.radio_name}. All
+              &copy; {new Date().getFullYear()} {this.state.radio_name}. All
               Rights Reserved.
             </div>
           </div>

@@ -1,10 +1,9 @@
   import React, { Component } from "react";
-  import { setscheduleMonday } from "../../actions/index";
+  import { scheduleMonday } from "../../actions/index";
   import { connect } from "react-redux";
-  import Moment from 'react-moment';
-
 
   function mapStateToProps(state) {
+
     return {
       monday: state.schedule.schedule_monday
     };
@@ -13,9 +12,8 @@
 
     componentDidMount() {
 
-      this.props.setscheduleMonday();
+      this.props.scheduleMonday();
     }
-
 
     render() {
       return (
@@ -24,11 +22,10 @@
               <tr>
 
                 <td>
-                  <Moment
-                      format="h:mm A">{new Date('1976/12/12 ' + monday.time)}</Moment>
+                  {monday.show.start_time}
                 </td>
                 <td>
-                  {monday.radio_show}
+                  {monday.show.prusa_show.name}
                 </td>
               </tr>
           )}
@@ -38,4 +35,4 @@
     }
   }
 
-  export default connect(mapStateToProps,{setscheduleMonday})(ScheduleMonday);
+  export default connect(mapStateToProps,{scheduleMonday})(ScheduleMonday);
