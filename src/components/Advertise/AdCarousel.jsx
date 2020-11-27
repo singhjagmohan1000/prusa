@@ -61,6 +61,11 @@ export class AdCarousel extends React.Component {
                         <Transformation height="400"  width="1170"  crop="scale"/>
                     </Image>
                 </Carousel.Item>
+                <Carousel.Item>
+                    <Image cloudName="prusa" className="img-responsive" publicId="stockton_lodi.png">
+                        <Transformation height="400"  width="1170"  crop="scale"/>
+                    </Image>
+                </Carousel.Item>                
             </Carousel>
                 <MediaKit/>
                 </div>
