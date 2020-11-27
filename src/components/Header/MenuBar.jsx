@@ -19,7 +19,7 @@ export class MenuBar extends React.Component {
         <dd />
         <dt className="item">
           <Link type="button" class="btn-main" to="/team">
-            Our Team
+             Team
           </Link>
         </dt>
           <dt className="item">
