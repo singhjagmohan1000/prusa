@@ -10,7 +10,8 @@ import {
   Listen,
   Header,
   Footer,
-  Contact
+  Contact,
+  Privacy
 } from "../components";
 
 export class App extends React.Component {
@@ -73,6 +74,11 @@ export class App extends React.Component {
                   <Link id="menu-close-contact" to="/contact">Contact Us</Link>
                 </span>
               </li>
+              <li>
+                <span className="name">
+                  <Link id="menu-close-contact" to="/privacy">Privacy Policy</Link>
+                </span>
+              </li>
             </ul>
           </nav>
           <div id="outer">
@@ -85,6 +91,7 @@ export class App extends React.Component {
               <Route path="/listen" component={Listen} />
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
+              <Route path="/privacy" component={Privacy} />
               <div className="clearfooter" />
               <Footer />
             </div>

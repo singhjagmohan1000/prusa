@@ -22,6 +22,13 @@ export class LeftFooter extends React.Component {
           <span className="clearfix visible-sm" />
           All Rights Reserved.
         </div>
+        <div className="tabBlock" id="TabBlock-4">
+          <ul className="menu">
+            <li>
+              <Link to="/privacy">Privacy Policy</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     );
   }

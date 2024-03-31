@@ -7,3 +7,4 @@ export * from "./Contact/Contact";
 export * from "./Footer/Footer";
 export * from "./Header/Header";
 export * from "./Listen/Listen";
+export * from "./Privacy/Privacy";
