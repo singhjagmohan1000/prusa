@@ -59,11 +59,11 @@ export class App extends React.Component {
                   <Link  id="menu-close-advertise" to="/advertise">Advertise</Link>
                 </span>
               </li>
-              <li>
+              {/* <li>
                 <span className="name">
                   <a  id="menu-close-matrimonial" rel="noopener noreferrer"  target="_blank" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQz8sM2ZJFeqe6FeU8cn4qBLl3V9yeMbpXXQ2s7W-0BoatC51Qpqnzb6Ix5rzB0LQvPxmvA0QiFp-z6/pubhtml?gid=0&single=true">Matrimonial</a>
                 </span>
-              </li>              
+              </li>               */}
               <li>
                 <span className="name">
                   <Link id="menu-close-about" to="/about">About Us</Link>
