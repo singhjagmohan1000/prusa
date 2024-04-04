@@ -41,7 +41,7 @@ export class App extends React.Component {
               </li>
               <li>
                 <span className="name">
-                  <Link   id="menu-close-team" to="/team">Our Team</Link>
+                  <Link   id="menu-close-team" to="/team">Team</Link>
                 </span>
               </li>
               <li>
@@ -76,7 +76,7 @@ export class App extends React.Component {
               </li>
               <li>
                 <span className="name">
-                  <Link id="menu-close-contact" to="/privacy">Privacy Policy</Link>
+                  <Link id="menu-close-privacy" to="/privacy">Privacy Policy</Link>
                 </span>
               </li>
             </ul>

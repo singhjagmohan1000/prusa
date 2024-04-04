@@ -58,6 +58,12 @@ export class MenuBar extends React.Component {
           </Link>
         </dt>
         <dd />
+        <dt className="item">
+          <Link to="/privacy" type="button" class="btn-main">
+            Privacy Policy
+          </Link>
+        </dt>
+        <dd/>
       </dl>
     );
   }
