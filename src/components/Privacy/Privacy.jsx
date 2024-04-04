@@ -8,9 +8,9 @@ export class Privacy extends React.Component {
           <div className="prusa_about">
             <div className="row">
               <h2>
-              Punjabi Radio USA App Privacy Policy
+              &nbsp;&nbsp;Punjabi Radio USA App Privacy Policy
               </h2>
-              <h3>PRIVACY POLICY</h3>
+              <h3>&nbsp;&nbsp;PRIVACY POLICY</h3>
               <p>
               Effective Date: 01 Jan 2024
               Punjabi Radio USA, based in San Jose, California, is committed to protecting the privacy of our listeners and users. This Privacy Policy outlines our practices concerning the collection, use, and disclosure of information via our mobile applications available on Android and iPhone platforms. Given our commitment to your privacy, we do not collect any personal information from users of our applications.<br></br><br></br>
