@@ -8,3 +8,4 @@ export * from "./Footer/Footer";
 export * from "./Header/Header";
 export * from "./Listen/Listen";
 export * from "./Privacy/Privacy";
+export * from "./Jobs/Jobs";

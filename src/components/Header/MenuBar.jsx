@@ -39,19 +39,25 @@ export class MenuBar extends React.Component {
             Advertise
           </Link>
         </dt>
-        <dd />       
+        <dd />
         <dt className="item">
-          <Link to="/about" type="button" class="btn-main">
-            About Us
+          <Link to="/jobs" type="button" class="btn-main">
+            Jobs
           </Link>
         </dt>
-        <dd />
+        <dd/>     
         <dt className="item">
           <Link to="/contact" type="button" class="btn-main">
             Contact Us
           </Link>
         </dt>
         <dd />
+        <dt className="item">
+          <Link to="/about" type="button" class="btn-main">
+            About Us
+          </Link>
+        </dt>
+        <dd/>
         <dt className="item">
           <Link to="/privacy" type="button" class="btn-main">
             Privacy Policy

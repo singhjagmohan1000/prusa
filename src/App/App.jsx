@@ -11,6 +11,7 @@ import {
   Header,
   Footer,
   Contact,
+  Jobs,
   Privacy
 } from "../components";
 
@@ -71,6 +72,11 @@ export class App extends React.Component {
               </li>
               <li>
                 <span className="name">
+                  <Link id="menu-close-contact" to="/jobs">Jobs</Link>
+                </span>
+              </li>
+              <li>
+                <span className="name">
                   <Link id="menu-close-privacy" to="/privacy">Privacy Policy</Link>
                 </span>
               </li>
@@ -86,6 +92,7 @@ export class App extends React.Component {
               <Route path="/listen" component={Listen} />
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
+              <Route path="/jobs" component={Jobs} />
               <Route path="/privacy" component={Privacy} />
               <div className="clearfooter" />
               <Footer />
